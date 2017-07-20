@@ -11,8 +11,10 @@ class PicturesController < ApplicationController
   end
 
   def index
+    @pic = Photo.last
+
   
-    render("/pictures/index.html.erb")
+    render("/pictures/all_photos.html.erb")
   end
   
   def show
