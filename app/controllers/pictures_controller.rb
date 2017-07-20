@@ -7,13 +7,20 @@ class PicturesController < ApplicationController
 
   def create_row
   
+    p = Photo.new
+    p.source = params["the_source"]
+    p.caption = params["the_caption"]
+    p.save
+    
+    @photo_count = Photo.count
+  
     render("/pictures/create_row.html.erb")
   end
 
   def index
     @list_of_photos = Photo.order(:created_at => :desc)
 
-    render("/pictures/all_photos.html.erb")
+    render("/pictures/index.html.erb")
   end
   
   def show
