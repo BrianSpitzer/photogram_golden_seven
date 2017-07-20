@@ -11,7 +11,7 @@ class PicturesController < ApplicationController
   end
 
   def index
-    @list_of_photos = Photo.order(:id)
+    @list_of_photos = Photo.order(:created_at => :desc)
 
     render("/pictures/all_photos.html.erb")
   end
