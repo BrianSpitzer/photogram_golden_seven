@@ -5,7 +5,7 @@
 </a>
 
   
-<%= @list_of_photos.each do |the_pic| %>
+<% @list_of_photos.each do |the_pic| %>
   <div class="thumbnail">
     <img src="<%= the_pic.source %>">
     <div class="caption">
@@ -22,4 +22,4 @@
       </a>
     </div>
   </div>
-<%=end %>
+<%end %>
