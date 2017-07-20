@@ -15,4 +15,12 @@ class PicturesController < ApplicationController
     render("/pictures/index.html.erb")
   end
   
+  def show
+ 
+    @pic = Photo.find(params["the_id"])
+  
+    render("/pictures/show.html.erb")
+  end
+  
+  
 end
