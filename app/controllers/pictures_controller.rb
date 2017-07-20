@@ -11,9 +11,8 @@ class PicturesController < ApplicationController
   end
 
   def index
-    @pic = Photo.last
+    @list_of_photos = Photo.order(:id)
 
-  
     render("/pictures/all_photos.html.erb")
   end
   
