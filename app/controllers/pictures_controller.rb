@@ -31,6 +31,7 @@ class PicturesController < ApplicationController
   end
   
   def edit_form
+    
   
     render("/pictures/edit_form.html.erb")
   end
