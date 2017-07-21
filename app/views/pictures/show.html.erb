@@ -9,3 +9,15 @@
 <p>
     <%= @pic.updated_at %>
 </p>
+
+<a href="/photos" class="btn btn-default">
+  Go back
+</a>
+
+<a href="/photos/<%= @pic.id %>/edit" class="btn btn-default">
+  Edit
+</a>
+
+<a href="/delete_photo/126" class="btn btn-default">
+  Delete
+</a>
